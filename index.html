@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta
+      name="Description"
+      content="Developer news from multiple subreddits"
+    />
+    <title>Developer News</title>
+    <link rel="preconnect" href="https://www.reddit.com/" />
+    <link rel="preconnect" href="https://www.google.com/s2/favicons/" />
+  </head>
+  <body>
+    <div id="app"></div>
+    <script>
+      function getTheme() {
+        const currentTheme = localStorage.getItem("theme");
+        if (currentTheme) {
+          document.body.setAttribute("data-theme", currentTheme);
+        }
+      }
+      getTheme();
+    </script>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
